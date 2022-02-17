@@ -1,0 +1,31 @@
+{
+  "name": "docker-package",
+  "description": "",
+  "version": "0.0.0",
+  "license": "MIT",
+  "author": {
+    "name": "Pascal Iske",
+    "email": "info@pascaliske.dev",
+    "url": "https://pascaliske.dev"
+  },
+  "repository": {
+    "url": "https://github.com/pascaliske/docker-package.git",
+    "type": "git"
+  },
+  "bugs": {
+    "url": "https://github.com/pascaliske/docker-package/issues"
+  },
+  "private": true,
+  "scripts": {
+    "prepare": "husky install",
+    "version": "bump --yes package.json",
+    "changelog": "standard-changelog"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^15.0.0",
+    "@commitlint/config-conventional": "^15.0.0",
+    "@rstacruz/bump-cli": "^2.0.1",
+    "husky": "^7.0.2",
+    "standard-changelog": "^2.0.27"
+  }
+}
