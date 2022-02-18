@@ -6,11 +6,6 @@ if [ -z "${CF_API_TOKEN}" ]; then
     exit 2
 fi
 
-if [ -z "${CF_ZONE_ID}" ]; then
-    echo "Required variable \$CF_ZONE_ID is empty!"
-    exit 2
-fi
-
 if [ -z "${DOMAIN}" ]; then
     echo "Required variable \$DOMAIN is empty!"
     exit 2
@@ -30,8 +25,12 @@ if [ -z "${IP}" ]; then
     exit 3
 fi
 
+# fetch zone ID associated with the domain
+ZONES=$(curl -s -X GET -H "Content-Type: application/json" -H "Authorization: Bearer ${CF_API_TOKEN}" "https://api.cloudflare.com/client/v4/zones")
+ZONE_ID=$(echo "${ZONES}" | jq -r ".result[] | select(.name == \"${DOMAIN}\") | .id")
+
 # fetch record ID associated with the domain
-RECORDS=$(curl -s -X GET -H "Content-Type: application/json" -H "Authorization: Bearer ${CF_API_TOKEN}" "https://api.cloudflare.com/client/v4/zones/${CF_ZONE_ID}/dns_records")
+RECORDS=$(curl -s -X GET -H "Content-Type: application/json" -H "Authorization: Bearer ${CF_API_TOKEN}" "https://api.cloudflare.com/client/v4/zones/${ZONE_ID}/dns_records")
 RECORD_ID=$(echo "${RECORDS}" | jq -r ".result[] | select(.type == \"A\" and .name == \"${NAME}.${DOMAIN}\") | .id")
 
 if [ -z "${RECORD_ID}" ]; then
@@ -41,7 +40,7 @@ fi
 
 # send request with name, domain to update DNS record
 DATA="{\"type\": \"A\", \"name\": \"${NAME}.${DOMAIN}\", \"content\": \"${IP}\"}"
-RESPONSE=$(curl -s -X PUT -H "Content-Type: application/json" -H "Authorization: Bearer ${CF_API_TOKEN}" -d "${DATA}" "https://api.cloudflare.com/client/v4/zones/${CF_ZONE_ID}/dns_records/${RECORD_ID}")
+RESPONSE=$(curl -s -X PUT -H "Content-Type: application/json" -H "Authorization: Bearer ${CF_API_TOKEN}" -d "${DATA}" "https://api.cloudflare.com/client/v4/zones/${ZONE_ID}/dns_records/${RECORD_ID}")
 SUCCESS=$(echo "$RESPONSE" | jq -r ".success")
 
 if [ "${SUCCESS}" != true ]; then
