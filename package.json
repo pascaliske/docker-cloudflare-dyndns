@@ -1,7 +1,7 @@
 {
   "name": "docker-cloudflare-dyndns",
   "description": "Simple container image to update a dynamic DNS record using the Cloudflare API.",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "license": "MIT",
   "author": {
     "name": "Pascal Iske",
