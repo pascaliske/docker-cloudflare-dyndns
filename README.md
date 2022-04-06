@@ -16,6 +16,29 @@ docker pull pascaliske/cloudflare-dyndns
 docker pull ghcr.io/pascaliske/cloudflare-dyndns
 ```
 
+Then run it using the following command:
+
+```bash
+# docker hub
+docker run --rm -e DOMAIN=domain.com -e NAME=my pascaliske/cloudflare-dyndns
+
+# github container registry
+docker run --rm -e DOMAIN=domain.com -e NAME=my ghcr.io/pascaliske/cloudflare-dyndns
+```
+
+This will update the subdomain record `my.domain.com` in the DNS zone `domain.com` with your current IP address.
+
+## Configuration
+
+You can configure the container with the following additional environment variables:
+
+| Variable     | Required | Default       | Description                                       |
+| ------------ | :------: | ------------- | ------------------------------------------------- |
+| `TZ`         |    No    | `UTC`         | Adjust the time zone inside the container         |
+| `IP_SERVICE` |    No    | `ifconfig.co` | The IP service to retrieve your public IP address |
+| `DOMAIN`     |   Yes    | -             | Your DNS zone within Cloudflare                   |
+| `NAME`       |   Yes    | -             | Your Subdomain record to update                   |
+
 ## License
 
 [MIT](LICENSE.md) – © 2022 [Pascal Iske](https://pascaliske.dev)
