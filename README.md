@@ -32,12 +32,13 @@ This will update the subdomain record `my.domain.com` in the DNS zone `domain.co
 
 You can configure the container with the following additional environment variables:
 
-| Variable     | Required | Default       | Description                                       |
-| ------------ | :------: | ------------- | ------------------------------------------------- |
-| `TZ`         |    No    | `UTC`         | Adjust the time zone inside the container         |
-| `IP_SERVICE` |    No    | `ifconfig.co` | The IP service to retrieve your public IP address |
-| `DOMAIN`     |   Yes    | -             | Your DNS zone within Cloudflare                   |
-| `NAME`       |   Yes    | -             | Your Subdomain record to update                   |
+| Variable       | Required | Default       | Description                                       |
+| -------------- | :------: | ------------- | ------------------------------------------------- |
+| `TZ`           |    No    | `UTC`         | Adjust the time zone inside the container         |
+| `IP_SERVICE`   |    No    | `ifconfig.co` | The IP service to retrieve your public IP address |
+| `DOMAIN`       |   Yes    | -             | Your DNS zone within Cloudflare                   |
+| `NAME`         |   Yes    | -             | Your Subdomain record to update                   |
+| `CF_API_TOKEN` |   Yes    | -             | Your Cloudflare API token                         |
 
 ## License
 
