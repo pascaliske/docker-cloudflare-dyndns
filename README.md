@@ -40,6 +40,10 @@ You can configure the container with the following additional environment variab
 | `NAME`         |   Yes    | -             | Your Subdomain record to update                   |
 | `CF_API_TOKEN` |   Yes    | -             | Your Cloudflare API token                         |
 
+## Kubernetes
+
+If you want to use this tool as an CronJob inside of a Kubernetes cluster [check out my ready to deploy Helm chart](https://charts.pascaliske.dev/charts/cloudflare-dyndns/)!
+
 ## License
 
 [MIT](LICENSE.md) – © 2022 [Pascal Iske](https://pascaliske.dev)
