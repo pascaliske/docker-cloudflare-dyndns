@@ -1,0 +1,56 @@
+# project
+site_name: docker-cloudflare-dyndns
+site_description: Simple container image to update a dynamic DNS record using the Cloudflare API.
+site_author: Pascal Iske
+site_url: https://pascaliske.github.io/docker-cloudflare-dyndns/
+
+# repository
+repo_name: pascaliske/docker-cloudflare-dyndns
+repo_url: https://github.com/pascaliske/docker-cloudflare-dyndns
+
+# theme
+theme:
+  name: material
+  language: en
+  palette:
+    - scheme: default
+      media: "(prefers-color-scheme: light)"
+      toggle:
+        icon: material/brightness-4
+        name: Switch to dark mode
+    - scheme: slate
+      primary: lime
+      accent: lime
+      media: "(prefers-color-scheme: dark)"
+      toggle:
+        icon: material/brightness-7
+        name: Switch to light mode
+  font:
+    text: Lato
+    code: Source Code Pro
+  icon:
+    repo: fontawesome/brands/github
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - toc.follow
+    - toc.integrate
+    - content.code.annotate
+    - content.tabs.link
+
+# navigation
+nav:
+  - Home: index.md
+
+# socials
+extra:
+  social:
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/pascaliske
+    - icon: fontawesome/brands/github
+      link: https://github.com/pascaliske
+    - icon: fontawesome/brands/docker
+      link: https://hub.docker.com/u/pascaliske
