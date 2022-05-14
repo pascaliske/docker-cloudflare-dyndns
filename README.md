@@ -4,6 +4,25 @@
 
 [![Docker Image Version (tag latest semver)](https://img.shields.io/docker/v/pascaliske/cloudflare-dyndns/latest?style=flat-square)](https://hub.docker.com/r/pascaliske/cloudflare-dyndns) [![Docker Image Size (tag)](https://img.shields.io/docker/image-size/pascaliske/cloudflare-dyndns/latest?style=flat-square)](https://hub.docker.com/r/pascaliske/cloudflare-dyndns) [![Docker Pulls](https://img.shields.io/docker/pulls/pascaliske/cloudflare-dyndns?style=flat-square)](https://hub.docker.com/r/pascaliske/cloudflare-dyndns) [![GitHub Tag](https://img.shields.io/github/v/tag/pascaliske/docker-cloudflare-dyndns?style=flat-square)](https://github.com/pascaliske/docker-cloudflare-dyndns) [![Build Status](https://img.shields.io/github/workflow/status/pascaliske/docker-cloudflare-dyndns/Image/master?label=build&style=flat-square)](https://github.com/pascaliske/docker-cloudflare-dyndns/actions) [![GitHub Last Commit](https://img.shields.io/github/last-commit/pascaliske/docker-cloudflare-dyndns?style=flat-square)](https://github.com/pascaliske/docker-cloudflare-dyndns) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square)](https://opensource.org/licenses/MIT) [![Awesome Badges](https://img.shields.io/badge/badges-awesome-green.svg?style=flat-square)](https://github.com/Naereen/badges)
 
+## Image
+
+| Registry   | Image                                                                                                                             |
+| ---------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| Docker Hub | [`pascaliske/cloudflare-dyndns`](https://hub.docker.com/r/pascaliske/cloudflare-dyndns)                                           |
+| GitHub     | [`ghcr.io/pascaliske/cloudflare-dyndns`](https://github.com/pascaliske/docker-cloudflare-dyndns/pkgs/container/cloudflare-dyndns) |
+
+The following platforms are available for this image:
+
+```bash
+$ docker run --rm mplatform/mquery pascaliske/cloudflare-dyndns:latest
+Image: pascaliske/cloudflare-dyndns:latest
+ * Manifest List: Yes
+ * Supported platforms:
+   - linux/amd64
+   - linux/arm/v7
+   - linux/arm64
+```
+
 ## Usage
 
 To use this image pull it from one of the following registries:
