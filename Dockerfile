@@ -1,5 +1,5 @@
 # final image
-FROM pascaliske/alpine-curl-jq:latest
+FROM pascaliske/alpine-curl-jq:0.0.1
 LABEL maintainer="info@pascaliske.dev"
 
 # set timezone
