@@ -11,4 +11,3 @@ COPY ./updater.sh /usr/local/bin/cf-updater
 
 # setup script
 CMD [ "/usr/local/bin/cf-updater" ]
-
