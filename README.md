@@ -8,14 +8,14 @@
 
 | Registry   | Image                                                                                                                             |
 | ---------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| Docker Hub | [`pascaliske/cloudflare-dyndns`](https://hub.docker.com/r/pascaliske/cloudflare-dyndns)                                           |
 | GitHub     | [`ghcr.io/pascaliske/cloudflare-dyndns`](https://github.com/pascaliske/docker-cloudflare-dyndns/pkgs/container/cloudflare-dyndns) |
+| Docker Hub | [`pascaliske/cloudflare-dyndns`](https://hub.docker.com/r/pascaliske/cloudflare-dyndns)                                           |
 
 The following platforms are available for this image:
 
 ```bash
-$ docker run --rm mplatform/mquery pascaliske/cloudflare-dyndns:latest
-Image: pascaliske/cloudflare-dyndns:latest
+$ docker run --rm mplatform/mquery ghcr.io/pascaliske/cloudflare-dyndns:latest
+Image: ghcr.io/pascaliske/cloudflare-dyndns:latest
  * Manifest List: Yes
  * Supported platforms:
    - linux/amd64
@@ -28,21 +28,21 @@ Image: pascaliske/cloudflare-dyndns:latest
 To use this image pull it from one of the following registries:
 
 ```bash
-# docker hub
-docker pull pascaliske/cloudflare-dyndns
-
 # github container registry
 docker pull ghcr.io/pascaliske/cloudflare-dyndns
+
+# docker hub
+docker pull pascaliske/cloudflare-dyndns
 ```
 
 Then run it using the following command:
 
 ```bash
-# docker hub
-docker run --rm -e DOMAIN=domain.com -e NAME=my pascaliske/cloudflare-dyndns
-
 # github container registry
-docker run --rm -e DOMAIN=domain.com -e NAME=my ghcr.io/pascaliske/cloudflare-dyndns
+docker run --rm -e CF_API_TOKEN=xyz -e DOMAIN=domain.com -e NAME=my ghcr.io/pascaliske/cloudflare-dyndns
+
+# docker hub
+docker run --rm -e CF_API_TOKEN=xyz -e DOMAIN=domain.com -e NAME=my pascaliske/cloudflare-dyndns
 ```
 
 This will update the subdomain record `my.domain.com` in the DNS zone `domain.com` with your current IP address.
@@ -61,7 +61,7 @@ You can configure the container with the following additional environment variab
 
 ## Kubernetes
 
-If you want to use this tool as an CronJob inside of a Kubernetes cluster [check out my ready to deploy Helm chart](https://charts.pascaliske.dev/charts/cloudflare-dyndns/)!
+If you want to use this tool as an `CronJob` inside of a Kubernetes cluster [check out my ready to deploy Helm chart](https://charts.pascaliske.dev/charts/cloudflare-dyndns/)!
 
 ## License
 
