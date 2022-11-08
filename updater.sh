@@ -40,7 +40,7 @@ fi
 
 # send request with name, domain to update DNS record
 DATA="{\"type\": \"A\", \"name\": \"${NAME}.${DOMAIN}\", \"content\": \"${IP}\"}"
-RESPONSE=$(curl -s -X PUT -H "Content-Type: application/json" -H "Authorization: Bearer ${CF_API_TOKEN}" -d "${DATA}" "https://api.cloudflare.com/client/v4/zones/${ZONE_ID}/dns_records/${RECORD_ID}")
+RESPONSE=$(curl -s -X PATCH -H "Content-Type: application/json" -H "Authorization: Bearer ${CF_API_TOKEN}" -d "${DATA}" "https://api.cloudflare.com/client/v4/zones/${ZONE_ID}/dns_records/${RECORD_ID}")
 SUCCESS=$(echo "$RESPONSE" | jq -r ".success")
 
 if [ "${SUCCESS}" != true ]; then
