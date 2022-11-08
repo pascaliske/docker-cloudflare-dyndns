@@ -1,3 +1,12 @@
+## [0.1.1](https://github.com/pascaliske/docker-cloudflare-dyndns/compare/v0.1.0...v0.1.1) (2022-11-08)
+
+
+### Bug Fixes
+
+* use patch method for updating dns record ([cad2b19](https://github.com/pascaliske/docker-cloudflare-dyndns/commit/cad2b19b09a7094cbe27e19853863cabf27917ac))
+
+
+
 # [0.1.0](https://github.com/pascaliske/docker-cloudflare-dyndns/compare/v0.0.3...v0.1.0) (2022-10-07)
 
 
