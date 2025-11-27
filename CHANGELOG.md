@@ -1,3 +1,12 @@
+# [0.2.0](https://github.com/pascaliske/docker-cloudflare-dyndns/compare/v0.1.1...v0.2.0) (2025-11-27)
+
+
+### Features
+
+* improve security through non-root user ([bdb1e8c](https://github.com/pascaliske/docker-cloudflare-dyndns/commit/bdb1e8cbebc52a8ce6ba80fdc763f8056db8330e))
+
+
+
 ## [0.1.1](https://github.com/pascaliske/docker-cloudflare-dyndns/compare/v0.1.0...v0.1.1) (2022-11-08)
 
 
