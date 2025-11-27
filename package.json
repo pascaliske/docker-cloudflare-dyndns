@@ -16,6 +16,7 @@
     "url": "https://github.com/pascaliske/docker-cloudflare-dyndns/issues"
   },
   "private": true,
+  "packageManager": "yarn@1.22.22",
   "scripts": {
     "prepare": "husky",
     "version": "bump --yes package.json",
