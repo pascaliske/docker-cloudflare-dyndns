@@ -123,7 +123,7 @@ jobs:
       - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
 
       # scan image
-      - uses: crazy-max/ghaction-container-scan@v3
+      - uses: crazy-max/ghaction-container-scan@v4
         id: scan
         with:
           image: ${{ steps.image-name.outputs.image }}:latest
