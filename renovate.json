@@ -3,10 +3,5 @@
   "extends": ["config:base", ":preserveSemverRanges", ":disableRateLimiting"],
   "assigneesFromCodeOwners": true,
   "labels": ["dependencies"],
-  "packageRules": [
-    {
-      "matchPackagePatterns": ["commitlint"],
-      "groupName": "commitlint"
-    }
-  ]
+  "packageRules": []
 }

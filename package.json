@@ -17,16 +17,6 @@
   },
   "private": true,
   "packageManager": "yarn@1.22.22",
-  "scripts": {
-    "prepare": "husky",
-    "version": "bump --yes package.json",
-    "changelog": "standard-changelog"
-  },
-  "devDependencies": {
-    "@commitlint/cli": "^20.0.0",
-    "@commitlint/config-conventional": "^20.0.0",
-    "@rstacruz/bump-cli": "^2.0.1",
-    "husky": "^9.1.7",
-    "standard-changelog": "^7.0.1"
-  }
+  "scripts": {},
+  "devDependencies": {}
 }
