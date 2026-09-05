@@ -1,4 +1,5 @@
 #!/bin/sh
+# -*- coding: utf-8 -*-
 
 # ensure required variables are set
 if [ -z "${CF_API_TOKEN}" ]; then
