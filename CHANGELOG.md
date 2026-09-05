@@ -1,3 +1,12 @@
+# [0.3.0](https://github.com/pascaliske/docker-cloudflare-dyndns/compare/v0.2.0...v0.3.0) (2026-09-05)
+
+
+### Features
+
+* sign image using cosign, update workflows, clean-up ([b086766](https://github.com/pascaliske/docker-cloudflare-dyndns/commit/b086766512c523c6e4f7ae4414ef68543e0507e9))
+
+
+
 # [0.2.0](https://github.com/pascaliske/docker-cloudflare-dyndns/compare/v0.1.1...v0.2.0) (2025-11-27)
 
 
